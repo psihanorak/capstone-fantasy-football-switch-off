@@ -42,16 +42,22 @@ class MyNavbar extends React.Component {
         return (
           <Nav className="ml-auto" navbar>
             <NavItem>
-              <NavLink tag={RRNavLink} to="/home">Home</NavLink>
+              <NavLink tag={RRNavLink} to="/home" style={{ color: 'white' }}>Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to="/myteam">My Team</NavLink>
+              <NavLink tag={RRNavLink} to="/myteam" style={{ color: 'white' }}>My Team</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to="/players">NFL Players</NavLink>
+              <NavLink tag={RRNavLink} to="/nflplayers" style={{ color: 'white' }}>NFL Players</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink onClick={this.logMeOut}>Logout</NavLink>
+              <NavLink tag={RRNavLink} to="/injuries" style={{ color: 'white' }}>Injuries</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink tag={RRNavLink} to="/weeklyprojections" style={{ color: 'white' }}>Weekly Projections</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink style={{ color: 'white' }} onClick={this.logMeOut}>Logout</NavLink>
           </NavItem>
         </Nav>
         );
@@ -63,7 +69,7 @@ class MyNavbar extends React.Component {
     return (
       <div>
         <Navbar color="dark" light expand="md">
-          <NavbarBrand href="/"><i className="far fa-football-ball"></i></NavbarBrand>
+          <NavbarBrand href="/"><i className="fal fa-football-helmet"></i></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>
             {buildNavbar()}
