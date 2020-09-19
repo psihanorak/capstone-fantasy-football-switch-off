@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-const myPlayerShape = PropTypes.shape({
+const myPlayersShape = PropTypes.shape({
   myPlayerId: PropTypes.string.isRequired,
-  active: PropTypes.boolean.isRequired,
+  active: PropTypes.string.isRequired,
   jersey: PropTypes.string.isRequired,
   lname: PropTypes.string.isRequired,
   fname: PropTypes.string.isRequired,
@@ -12,4 +12,4 @@ const myPlayerShape = PropTypes.shape({
   uid: PropTypes.string.isRequired,
 });
 
-export default { myPlayerShape };
+export default { myPlayersShape };
