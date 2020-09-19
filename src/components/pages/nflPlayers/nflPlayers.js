@@ -1,10 +1,13 @@
 import React from 'react';
 
+import Players from '../../../images/nflPlayers.png';
+import './nflPlayers.scss';
+
 class nflPlayers extends React.Component {
   render() {
     return (
       <div className="players-page">
-        <h1>NFL PLAYERS</h1>
+        <img src={Players} alt="" />
       </div>
     );
   }

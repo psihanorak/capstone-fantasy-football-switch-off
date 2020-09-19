@@ -1,10 +1,13 @@
 import React from 'react';
 
+import Injury from '../../../images/injuries.png';
+import './Injuries.scss';
+
 class Injuries extends React.Component {
   render() {
     return (
       <div className="injuries-page">
-        <h1>INJURIES</h1>
+        <img src={Injury} alt="" />
       </div>
     );
   }

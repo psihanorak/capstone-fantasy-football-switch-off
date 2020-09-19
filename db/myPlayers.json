@@ -1,5 +1,5 @@
 {
-	"myPlayers": [{
+ {
 		"myPlayerId": "1",
 		"active": "1",
 		"jersey": "8",
@@ -223,5 +223,5 @@
 		"dob": "0000-00-00",
 		"college": "",
 		"uid": "O4QhyPlRZmUsux2NCZeYuc0qRmD3"
-	}]
+	}
 }

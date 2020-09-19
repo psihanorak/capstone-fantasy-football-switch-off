@@ -11,6 +11,9 @@ const getMyPlayersByUid = (uid) => new Promise((resolve, reject) => {
     .catch((err) => reject(err));
 });
 
-const getPlayers = (playerId) => axios.get(`${baseUrl}/players/${playerId}.json`);
+const getMyPlayerById = (myPlayerId) => axios.get(`${baseUrl}/myPlayers/${myPlayerId}.json`);
 
-export default { getMyPlayersByUid, getPlayers };
+export default {
+  getMyPlayersByUid,
+  getMyPlayerById,
+};
