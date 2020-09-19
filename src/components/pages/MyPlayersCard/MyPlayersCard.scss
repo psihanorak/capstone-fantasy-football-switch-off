@@ -1,0 +1,22 @@
+.MyPlayersCard {
+  text-align: center;
+  .card {
+    align-items: center;
+    margin: 1rem;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    img {
+      width: 250px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.btn {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  .btn-success {
+    background-color: #3F8B31;
+  }
+}
