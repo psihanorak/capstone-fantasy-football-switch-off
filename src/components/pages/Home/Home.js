@@ -1,13 +1,14 @@
 import React from 'react';
 
-import Stadium from '../../../images/home.png';
+import KidPlayer from '../../../images/kid football player.png';
 import './Home.scss';
 
 class Home extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <img src={Stadium} alt="" />
+        <h1>HOME</h1>
+        <img src={KidPlayer} alt="youth football player" />
       </div>
     );
   }

@@ -4,8 +4,6 @@ import myPlayersData from '../../../helpers/data/myPlayersData';
 
 import MyPlayersCard from '../MyPlayersCard/MyPlayersCard';
 
-import MyPlayers from '../../../images/myTeam.png';
-
 import './MyTeam.scss';
 
 class MyTeam extends React.Component {
@@ -30,9 +28,9 @@ class MyTeam extends React.Component {
 
     return (
       <div className="myTeam-page">
-        <img src={MyPlayers} alt="" />
-        <div>
-          { myPlayersCard }
+        <h1>MY TEAM</h1>
+        <div className="myPlayers-container">
+        { myPlayersCard }
         </div>
       </div>
     );

@@ -13,6 +13,8 @@ import {
 import firebase from 'firebase/app';
 import 'firebase/auth';
 
+import './MyNavbar.scss';
+
 class MyNavbar extends React.Component {
   static propTypes = {
     authed: PropTypes.bool.isRequired,
@@ -68,7 +70,7 @@ class MyNavbar extends React.Component {
 
     return (
       <div>
-        <Navbar color="dark" light expand="md">
+        <Navbar sticky="top" color="dark" light expand="md">
           <NavbarBrand href="/"><i className="fal fa-football-helmet"></i></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={isOpen} navbar>
