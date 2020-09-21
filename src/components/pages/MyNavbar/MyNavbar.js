@@ -56,7 +56,7 @@ class MyNavbar extends React.Component {
               <NavLink tag={RRNavLink} to="/injuries" style={{ color: 'white' }}>Injuries</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to="/weeklyprojections" style={{ color: 'white' }}>Weekly Projections</NavLink>
+              <NavLink tag={RRNavLink} to="/newplayer" style={{ color: 'white' }}>New Player</NavLink>
             </NavItem>
             <NavItem>
               <NavLink style={{ color: 'white' }} onClick={this.logMeOut}>Logout</NavLink>

@@ -12,9 +12,10 @@ import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/pages/MyNavbar/MyNavbar';
 import Home from '../components/pages/Home/Home';
 import MyTeam from '../components/pages/MyTeam/MyTeam';
+import Field from '../components/pages/Field/Field';
 import nflPlayers from '../components/pages/nflPlayers/nflPlayers';
 import Injuries from '../components/pages/Injuries/Injuries';
-import WeeklyProjections from '../components/pages/WeeklyProjections/WeeklyProjections';
+import NewMyPlayer from '../components/pages/NewMyPlayer/NewMyPlayer';
 
 import fbConnection from '../helpers/data/connection';
 
@@ -67,9 +68,10 @@ class App extends React.Component {
             <Switch>
               <PrivateRoute path="/home" component={Home} authed={authed} />
               <PrivateRoute path="/myteam" component={MyTeam} authed={authed} />
+              <PrivateRoute path="/field/:myPlayerId" component={Field} authed={authed} />
               <PrivateRoute path="/nflplayers" component={nflPlayers} authed={authed} />
               <PrivateRoute path="/injuries" component={Injuries} authed={authed} />
-              <PrivateRoute path="/weeklyprojections" component={WeeklyProjections} authed={authed} />
+              <PrivateRoute path="/newplayer" component={NewMyPlayer} authed={authed} />
               <PublicRoute path="/auth" component={Auth} authed={authed} />
               <Redirect from ="*" to="/home" />
             </Switch>
