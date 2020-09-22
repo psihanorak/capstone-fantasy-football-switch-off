@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './Field.scss';
+import './Locker.scss';
 
 class Field extends React.Component {
   render() {
     return (
       <div className="Field-page">
-        <h1>Game Day</h1>
+        <h1>Locker Room</h1>
       </div>
     );
   }

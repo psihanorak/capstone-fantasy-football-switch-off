@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+
+import myPlayerShape from '../../../helpers/propz/myPlayerShape';
 
 import './MyPlayersCard.scss';
 
 const MyPlayersCard = (props) => {
-  const { myPlayer } = props;
+  const { myPlayer, deleteMyPlayer } = props;
+
+  const locker = `/locker/${myPlayer.id}`;
 
   return (
     <div className="MyPlayersCard" id={myPlayer.id}>
@@ -15,13 +21,20 @@ const MyPlayersCard = (props) => {
         <p className="card-text">Team: { myPlayer.team }</p>
         <p className="card-text">Position: { myPlayer.position }</p>
         <div className="Start-Remove-btn">
-          <button type="button" className="btn btn-success">Start</button>
-          <button type="button" className="btn btn-danger" onClick={() => { props.deletePlayer(myPlayer.id); }}>Remove</button>
+          <Link to={locker}>
+          <button type="button" className="btn btn-success">Change</button>
+          </Link>
+          <button type="button" className="btn btn-danger" onClick={() => { deleteMyPlayer(myPlayer.id); }}>Remove</button>
         </div>
       </div>
     </div>
     </div>
   );
+};
+
+MyPlayersCard.propTypes = {
+  myPlayer: myPlayerShape.myPlayerShape,
+  deleteMyPlayer: PropTypes.func.isRequired,
 };
 
 export default MyPlayersCard;

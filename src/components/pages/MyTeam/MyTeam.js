@@ -1,39 +1,47 @@
-import React, { useState, useEffect } from 'react';
-
-import AllMyPlayers from '../AllMyPlayers/AllMyPlayers';
+import React from 'react';
 
 import authData from '../../../helpers/data/authData';
 import myPlayersData from '../../../helpers/data/myPlayersData';
 
+import MyPlayersCard from '../MyPlayersCard/MyPlayersCard';
+
 import './MyTeam.scss';
 
-const MyTeam = (props) => {
-  const [myPlayers, setMyPlayers] = useState([]);
+class MyTeam extends React.Component {
+  state = {
+    myPlayers: [],
+  }
 
-  const getMyPlayers = () => {
+  getMyPlayers = () => {
     myPlayersData.getMyPlayersByUid(authData.getUid())
-      .then((res) => setMyPlayers(res))
+      .then((myPlayers) => this.setState({ myPlayers }))
       .catch((err) => console.error(err));
-  };
+  }
 
-  useEffect(getMyPlayers, []);
+  componentDidMount() {
+    this.getMyPlayers();
+  }
 
-  const deletePlayerEvent = (myPlayerId) => {
-    myPlayersData.deletePlayer(myPlayerId)
-      .then(() => {
-        getMyPlayers();
-      })
+  deleteMyPlayer = (myPlayerId) => {
+    myPlayersData.deleteMyPlayer(myPlayerId)
+      .then(() => this.getMyPlayers())
       .catch((err) => console.error(err));
-  };
+  }
 
-  return (
-    <div className="MyTeam-page">
-      <h1>MY TEAM</h1>
-      <div className="AllMyPlayers">
-        <AllMyPlayers myPlayers={myPlayers} deletePlayerEvent={deletePlayerEvent} />
+  render() {
+    const { myPlayers } = this.state;
+
+    const myPlayersCard = myPlayers.map((myPlayer) => <MyPlayersCard key={myPlayer.id} myPlayer={myPlayer} deleteMyPlayer={this.deleteMyPlayer} />);
+
+    return (
+      <div className="MyTeam-page">
+        <h1>MY TEAM</h1>
+        <div className="MyPlayers">
+          {myPlayersCard}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default MyTeam;

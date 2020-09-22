@@ -12,7 +12,7 @@ import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/pages/MyNavbar/MyNavbar';
 import Home from '../components/pages/Home/Home';
 import MyTeam from '../components/pages/MyTeam/MyTeam';
-import Field from '../components/pages/Field/Field';
+import Locker from '../components/pages/Locker/Locker';
 import nflPlayers from '../components/pages/nflPlayers/nflPlayers';
 import Injuries from '../components/pages/Injuries/Injuries';
 import NewMyPlayer from '../components/pages/NewMyPlayer/NewMyPlayer';
@@ -68,7 +68,7 @@ class App extends React.Component {
             <Switch>
               <PrivateRoute path="/home" component={Home} authed={authed} />
               <PrivateRoute path="/myteam" component={MyTeam} authed={authed} />
-              <PrivateRoute path="/field/:myPlayerId" component={Field} authed={authed} />
+              <PrivateRoute path="/locker/:myPlayerId" component={Locker} authed={authed} />
               <PrivateRoute path="/nflplayers" component={nflPlayers} authed={authed} />
               <PrivateRoute path="/injuries" component={Injuries} authed={authed} />
               <PrivateRoute path="/newplayer" component={NewMyPlayer} authed={authed} />
