@@ -50,12 +50,6 @@ class MyNavbar extends React.Component {
               <NavLink tag={RRNavLink} to="/myteam" style={{ color: 'white' }}>My Team</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink tag={RRNavLink} to="/nflplayers" style={{ color: 'white' }}>NFL Players</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink tag={RRNavLink} to="/injuries" style={{ color: 'white' }}>Injuries</NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink tag={RRNavLink} to="/newplayer" style={{ color: 'white' }}>New Player</NavLink>
             </NavItem>
             <NavItem>

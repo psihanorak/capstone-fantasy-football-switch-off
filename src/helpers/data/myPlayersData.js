@@ -17,7 +17,7 @@ const createMyPlayer = (newMyPlayer) => axios.post(`${baseUrl}/myPlayers.json`, 
 
 const deleteMyPlayer = (myPlayerId) => axios.delete(`${baseUrl}/myPlayers/${myPlayerId}.json`);
 
-const updateMyPlayer = (myPlayerId, editedMyPlayer) => axios.put(`${baseUrl}/myPlayers/${myPlayerId.json}`, editedMyPlayer);
+const updateMyPlayer = (myPlayerId, updatedMyPlayer) => axios.put(`${baseUrl}/myPlayers/${myPlayerId}.json`, updatedMyPlayer);
 
 export default {
   getMyPlayersByUid,

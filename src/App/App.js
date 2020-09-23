@@ -12,10 +12,8 @@ import Auth from '../components/pages/Auth/Auth';
 import MyNavbar from '../components/pages/MyNavbar/MyNavbar';
 import Home from '../components/pages/Home/Home';
 import MyTeam from '../components/pages/MyTeam/MyTeam';
-import Locker from '../components/pages/Locker/Locker';
-import nflPlayers from '../components/pages/nflPlayers/nflPlayers';
-import Injuries from '../components/pages/Injuries/Injuries';
 import NewMyPlayer from '../components/pages/NewMyPlayer/NewMyPlayer';
+import EditMyPlayer from '../components/pages/EditMyPlayer/EditMyPlayer';
 
 import fbConnection from '../helpers/data/connection';
 
@@ -68,9 +66,7 @@ class App extends React.Component {
             <Switch>
               <PrivateRoute path="/home" component={Home} authed={authed} />
               <PrivateRoute path="/myteam" component={MyTeam} authed={authed} />
-              <PrivateRoute path="/locker/:myPlayerId" component={Locker} authed={authed} />
-              <PrivateRoute path="/nflplayers" component={nflPlayers} authed={authed} />
-              <PrivateRoute path="/injuries" component={Injuries} authed={authed} />
+              <PrivateRoute path="/edit/:myPlayerId" component={EditMyPlayer} authed={authed} />
               <PrivateRoute path="/newplayer" component={NewMyPlayer} authed={authed} />
               <PublicRoute path="/auth" component={Auth} authed={authed} />
               <Redirect from ="*" to="/home" />
